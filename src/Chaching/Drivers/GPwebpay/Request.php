@@ -30,7 +30,9 @@ class Request extends \Chaching\Message
 			'MERCHANTNUMBER', 'ORDERNUMBER', 'AMOUNT', 'CURRENCY', 'URL'
 		];
 
-		$this->optional_fields = [ 'MERORDERNUM', 'MD', 'DESCRIPTION' ];
+		$this->optional_fields = [
+			'MERORDERNUM', 'MD', 'DESCRIPTION', 'ADDINFO'
+		];
 
 		$this->field_map = [
 			Driver::AMOUNT 				=> 'AMOUNT',
@@ -211,7 +213,7 @@ class Request extends \Chaching\Message
 		$fields 			= [
 			'MERCHANTNUMBER', 'OPERATION', 'ORDERNUMBER', 'AMOUNT',
 			'CURRENCY', 'DEPOSITFLAG', 'MERORDERNUM', 'URL', 'DESCRIPTION',
-			'MD'
+			'MD', 'ADDINFO'
 		];
 
 		foreach ($fields as $field)
